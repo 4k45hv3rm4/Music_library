@@ -1,0 +1,16 @@
+{% extends 'cd_library/base.html' %}
+
+{%  block content %}
+    {% for i in cd_info %}
+        <div class="list-group">
+          <a href="{% url 'detail' i.id %}" class="list-group-item list-group-item-action flex-column align-items-end active">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ i.title }}</h5>
+              <small>{{ i.date }}</small>
+            </div>
+            <p class="mb-1">{{ i.description }}</p>
+            <small>{{ i.artist }}</small>
+          </a>
+        </div>
+    {% endfor %}
+{% endblock %}

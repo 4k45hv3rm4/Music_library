@@ -1,0 +1,17 @@
+{% extends 'cd_library/base.html' %}
+
+{% block content %}
+Details:-
+     <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-end active">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ cd_detail.title }}</h5>
+              <small>{{ cd_detail.date }}</small>
+            </div>
+            <p class="mb-1">{{ cd_detail.description }}</p>
+            <small>{{ cd_detail.artist }}</small>
+          </a>
+        </div>
+<a href="{% url 'index' %}">Home</a>
+{% endblock %}
+
